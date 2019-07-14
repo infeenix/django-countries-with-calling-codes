@@ -18,7 +18,7 @@ setup(
     url='https://github.com/SmileyChris/django-countries/',
     author='Chris Beaven',
     author_email='smileychris@gmail.com',
-    install_requires=['geoip2']
+    install_requires=['geoip2'],
     classifiers=[
         'Development Status :: 5 - Production/Stable',
         'Environment :: Web Environment',
