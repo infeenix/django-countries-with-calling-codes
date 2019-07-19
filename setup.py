@@ -7,29 +7,34 @@ with open(os.path.join(os.path.dirname(__file__), 'README.rst')) as readme:
 
 os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
+REQUIREMENTS = [
+    'Django>=1.11',
+    'geoip2>=2.9.0',
+]
+
 setup(
-    name='django-countries',
-    version='5.3.4.dev0',
+    name='django-countries-with-calling-codes',
+    version='0.1',
     packages=find_packages(),
     include_package_data=True,
     license='MIT',
-    description='Provides a country field for Django models.',
+    description='Django-countries fork with calling codes and geoip2 integration added',
     long_description=README,
-    url='https://github.com/SmileyChris/django-countries/',
-    author='Chris Beaven',
-    author_email='smileychris@gmail.com',
-    install_requires=['geoip2'],
+    url='https://github.com/rondebu/django-countries-with-calling-codes',
+    author='Rondebu Software',
+    author_email='info@rondebu.com',
     classifiers=[
-        'Development Status :: 5 - Production/Stable',
         'Environment :: Web Environment',
+        'Framework :: Django',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: MIT License',
         'Operating System :: OS Independent',
         'Programming Language :: Python',
-        'Programming Language :: Python :: 2.7',
-        'Programming Language :: Python :: 3.4',
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
-        'Framework :: Django'
+        'Framework :: Django',
+        'Topic :: Internet :: WWW/HTTP',
+        'Topic :: Internet :: WWW/HTTP :: Dynamic Content',
     ],
+    install_requires=REQUIREMENTS,
 )
