@@ -23,7 +23,7 @@ def get_request_country(request, default=None):
     g = GeoIP2(path=DATASETS_DIR)
     try:
         country = g.country(ip)
-        if country in countries_dict:
+        if country["country_code"] in countries_dict:
             return Country(code=country["country_code"])
         else:
             return default
